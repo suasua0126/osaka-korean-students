@@ -1,24 +1,31 @@
-import Image from 'next/image'
+// src/app/page.tsx
+
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <div className="relative w-full h-[50vh] min-h-[320px]">
+    <main className="pt-20 w-full min-h-screen flex flex-col items-center bg-white">
+      {/* 학교 메인 이미지 */}
+      <div className="w-full max-w-3xl">
         <Image
           src="/school-image.jpg"
-          alt="Osaka Metropolitan University"
-          layout="fill"
-          objectFit="cover"
+          alt="오사카공립대학"
+          width={1200}
+          height={500}
+          className="w-full h-auto object-cover rounded-xl shadow mb-8"
           priority
-          className="rounded-b-xl"
         />
       </div>
-      <section className="max-w-2xl mx-auto mt-8 px-4 text-center">
-        <h1 className="text-2xl font-bold mb-2">오사카공립대학의 한국인 재학생과 예비 입학생을 위한 사이트입니다</h1>
-        <p className="text-base text-gray-700 mb-8">
-          오사카공립대학(Osaka Metropolitan University, OMU)은 2022년 오사카시립대학과 오사카부립대학의 통합으로 탄생한 일본 최대규모의 공립대학입니다. 다양한 학부와 첨단 연구 시설을 갖추고 있으며, 국제 교류와 지역사회 연계에도 적극적으로 참여하고 있습니다. 오사카 중심부에 위치해 학생들이 활기찬 도시 생활과 함께 우수한 교육·연구 환경을 경험할 수 있는 것이 큰 특징입니다.
+      {/* 인삿말(줄바꿈 포함) */}
+      <div className="w-full max-w-2xl px-4 mb-6 text-center">
+        <p className="text-xl font-semibold whitespace-pre-line">
+          {`오사카공립대학의 
+          재학생과 예비 입학생을 위한 사이트입니다.
+
+오사카공립대학은 오사카부립대학과 오사카시립대학이 통합되어 2022년에 새롭게 출범한 국공립 종합대학입니다. 
+다양한 전공과 국제적인 교류, 활기찬 학생 생활을 자랑하며, 오사카의 중심에서 일본과 세계를 연결하는 교육 허브 역할을 하고 있습니다.`}
         </p>
-      </section>
-    </div>
-  )
+      </div>
+    </main>
+  );
 }
