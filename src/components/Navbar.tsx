@@ -1,24 +1,32 @@
-'use client'
-import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
-  return (
-    <nav className="fixed top-0 w-full z-50 bg-white shadow flex items-center px-8 h-20 justify-between">
-      <Link href="/" className="flex items-center gap-3">
-        <Image src="/omulogo.png" alt="학교 로고" width={56} height={56} />
-        <div className="flex flex-col leading-tight">
-          <span className="font-bold text-xl">오사카공립대학</span>
-          <span className="font-bold text-base text-gray-600">한국인 유학생회</span>
-        </div>
-      </Link>
-      <div className="flex-1" />
-      <div className="flex gap-8">
-        <Link href="/about" className="hover:text-blue-600">About</Link>
-        <Link href="/activity" className="hover:text-blue-600">Activity</Link>
-        <Link href="/information" className="hover:text-blue-600">Information</Link>
-        <Link href="/contact" className="hover:text-blue-600">Contact</Link>
-      </div>
-    </nav>
-  )
+    return (
+        <nav className="w-full flex items-center justify-between px-4 py-2 bg-white shadow fixed top-0 left-0 z-50">
+            <Link href="/" className="flex items-center gap-2">
+                {/* 로고 크기 조절: w-14 h-14로 키움 */}
+                <Image
+                    src="/omulogo.png"
+                    alt="OMU Logo"
+                    width={56} // w-14 = 56px
+                    height={56}
+                    className="w-14 h-14 object-contain"
+                    priority
+                />
+                <div className="flex flex-col leading-tight">
+                    <span className="font-bold text-[18px] md:text-[22px] tracking-tight" style={{ fontSize: "1.125rem" }}>
+                        {/* 4.5 */}
+                        오사카공립대학
+                    </span>
+                    <span className="font-bold text-[22px] md:text-[27px] text-primary" style={{ fontSize: "1.375rem" }}>
+                        {/* 5.5 */}
+                        한국인유학생회
+                    </span>
+                </div>
+            </Link>
+            {/* ...우측 네비게이션 메뉴(About/Activity/Information/Contact 등)... */}
+        </nav>
+    );
 }
+
