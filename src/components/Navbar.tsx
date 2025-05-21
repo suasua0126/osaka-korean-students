@@ -21,12 +21,12 @@ export default function Navbar() {
         <Image
           src="/omulogo.png"
           alt="OMU Logo"
-          width={128}
-          height={128}
-          className="w-20 h-20 md:w-32 md:h-32"
+          width={180}
+          height={180}
+          className="w-28 h-28 md:w-44 md:h-44"
           style={{
-            minWidth: "80px",
-            minHeight: "80px",
+            minWidth: "112px",
+            minHeight: "112px",
             objectFit: "contain",
           }}
           priority
@@ -54,7 +54,7 @@ export default function Navbar() {
       {/* 모바일 메뉴 오버레이 */}
       {open && (
         <div className="fixed inset-0 z-40 bg-black bg-opacity-50 flex flex-col">
-          <div className="bg-white shadow-md flex flex-col gap-8 py-12 px-8 w-4/5 max-w-xs h-full">
+          <div className="bg-white shadow-md flex flex-col gap-8 py-12 px-8 w-full max-w-none h-full">
             <button className="self-end mb-8" onClick={() => setOpen(false)}>
               <span className="text-2xl">✕</span>
             </button>
