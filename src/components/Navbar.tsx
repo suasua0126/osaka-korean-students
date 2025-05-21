@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-
 export default function Navbar() {
   return (
-    <nav className="w-full flex flex-col md:flex-row items-center justify-between px-4 py-2 bg-white shadow fixed top-0 left-0 z-50">
-      <Link href="/" className="flex items-center gap-2 md:gap-4 mb-2 md:mb-0">
-        {/* === 여기 아래 코드만 바꿔주면 됩니다! === */}
+    <nav className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-3 bg-white shadow fixed top-0 left-0 z-50">
+      <Link href="/" className="flex items-center gap-2">
         <Image
           src="/omulogo.png"
           alt="OMU Logo"
@@ -28,7 +26,12 @@ export default function Navbar() {
 </div>
 
       </Link>
-      {/* ...아래는 네비게이션 메뉴... */}
+      <div className="flex gap-6">
+        <Link href="/about" className="hover:text-blue-600 font-medium">About</Link>
+        <Link href="/activity" className="hover:text-blue-600 font-medium">Activity</Link>
+        <Link href="/information" className="hover:text-blue-600 font-medium">Information</Link>
+        <Link href="/contact" className="hover:text-blue-600 font-medium">Contact</Link>
+      </div>
     </nav>
   );
 }
