@@ -20,7 +20,7 @@ export default function Home() {
       <div className="w-full max-w-2xl px-4 mb-6 text-center">
         <p className="text-xl font-semibold whitespace-pre-line">
           {`오사카공립대학의 
-          재학생과 예비 입학생을 위한 사이트입니다.
+          한국인 재학생과 예비 입학생을 위한 사이트입니다.
 
 오사카공립대학은 오사카부립대학과 오사카시립대학이 통합되어 2022년에 새롭게 출범한 국공립 종합대학입니다. 
 다양한 학부와 첨단 연구 시설을 갖추고 있으며, 국제 교류와 지역사회 연계에도 적극적으로 참여하고 있습니다. 
