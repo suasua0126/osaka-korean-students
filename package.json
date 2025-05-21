@@ -1,20 +1,22 @@
 {
-  "name": "osaka-korean-students-template",
-  "version": "1.0.0",
-  "description": "이 프로젝트는 Next.js, React, Tailwind CSS 기반의 정적 웹사이트입니다.",
-  "main": "tailwind.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/suasua0126/osaka-korean-students.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/suasua0126/osaka-korean-students/issues"
-  },
-  "homepage": "https://github.com/suasua0126/osaka-korean-students#readme"
+    "name": "osaka-korean-students",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "^14.2.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.24",
+        "tailwindcss": "^3.3.3",
+        "typescript": "^5.4.2"
+    }
 }
+
