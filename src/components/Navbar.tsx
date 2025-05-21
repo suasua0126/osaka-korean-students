@@ -1,32 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Navbar() {
   return (
-    <nav className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-3 bg-white shadow fixed top-0 left-0 z-50">
-      <Link href="/" className="flex items-center gap-2">
+    <nav className="w-full flex items-center justify-between px-6 py-3 bg-white shadow fixed top-0 left-0 z-50">
+      {/* 좌측: 텍스트 */}
+      <Link href="/" className="flex flex-col justify-center items-start min-w-[120px]">
+        <span className="font-bold text-base md:text-xl">오사카공립대학</span>
+        <span className="font-bold text-sm md:text-lg">한국인유학생회</span>
+      </Link>
+      {/* 중앙: 학교 로고 */}
+      <Link href="/" className="flex-shrink-0 flex justify-center items-center">
         <Image
           src="/omulogo.png"
           alt="OMU Logo"
-          width={100}
-          height={100}
-          className="w-[60px] h-[60px] md:w-[80px] md:h-[80px]"
+          width={96}
+          height={96}
+          className="w-[72px] h-[72px] md:w-[96px] md:h-[96px]"
           style={{
-            minWidth: "40px",
-            minHeight: "40px",
-            width: "60px",
-            height: "60px",
-            objectFit: "contain"
+            minWidth: "72px",
+            minHeight: "72px",
+            objectFit: "contain",
           }}
           priority
         />
-        {/* === 여기까지 === */}
-        <div className="flex flex-col md:flex-row items-center">
-  <span className="font-bold text-base md:text-xl">오사카공립대학</span>
-  <span className="font-bold text-sm md:text-lg">한국인유학생회</span>
-</div>
-
       </Link>
-      <div className="flex gap-6">
+      {/* 우측: 메뉴 */}
+      <div className="flex gap-6 min-w-[180px] justify-end">
         <Link href="/about" className="hover:text-blue-600 font-medium">About</Link>
         <Link href="/activity" className="hover:text-blue-600 font-medium">Activity</Link>
         <Link href="/information" className="hover:text-blue-600 font-medium">Information</Link>
@@ -35,4 +35,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
 
